@@ -27,7 +27,7 @@ jobs:
         run: hugo --minify # Build the site (--minify is good practice)
 
       - name: Deploy to Server via rsync
-        uses: easingthemes/ssh-deploy@v5 # Using a popular SSH deploy action
+        uses: easingthemes/ssh-deploy@main # Using a popular SSH deploy action
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Secret stored in GitHub
           ARGS: "-rlgoDzvc -i --delete" # rsync arguments: recursive, links, group, owner, perms, devices, verbose, compress, include hidden files, delete extraneous files from dest
