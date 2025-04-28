@@ -1,0 +1,7 @@
+# Allow all ethical crawlers access to all content.
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap for discovering URLs.
+# Ensure your baseURL in config/_default/config.yaml is correct.
+Sitemap: https://kalaa.drblank.dev/sitemap.xml 
