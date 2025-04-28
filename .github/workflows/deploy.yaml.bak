@@ -1,0 +1,38 @@
+# .github/workflows/deploy.yml
+name: Build and Deploy Hugo Site
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+  push:
+    branches:
+      - main # Trigger workflow on push to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Important: fetch theme submodule
+          fetch-depth: 0 # Fetch all history for Hugo's .GitInfo
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest' # Or pin to a specific version '0.123.4'
+          # extended: true # Uncomment if your theme needs the extended version
+
+      - name: Build Hugo Site
+        run: hugo --minify # Build the site (--minify is good practice)
+
+      - name: Deploy to Server via rsync
+        uses: easingthemes/ssh-deploy@main # Using a popular SSH deploy action
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Secret stored in GitHub
+          ARGS: "-rlgoDzvc -i --delete" # rsync arguments: recursive, links, group, owner, perms, devices, verbose, compress, include hidden files, delete extraneous files from dest
+          SOURCE: "public/" # The directory Hugo builds to
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # Your server IP or domain (drblank.dev)
+          REMOTE_USER: ${{ secrets.REMOTE_USER }} # User on your server for deployment
+          TARGET: ${{ secrets.REMOTE_TARGET }} # Absolute path on the server where files go
+          EXCLUDE: "/.git/, /node_modules/" # Exclude unnecessary files
