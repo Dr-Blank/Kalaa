@@ -1,6 +1,6 @@
-# Kala | Dr. Blank's Art Corner - Hugo Site
+# Kalaa | Dr. Blank's Art Corner - Hugo Site
 
-This repository contains the source code and content for the Kala website ([https://kala.drblank.dev/](https://kala.drblank.dev/)), a personal collection focusing on Gujarati lyrics (especially Garba), discussions, and potentially film reviews in the future.
+This repository contains the source code and content for the Kalaa website ([https://kalaa.drblank.dev/](https://kalaa.drblank.dev/)), a personal collection focusing on Gujarati lyrics (especially Garba), discussions, and potentially film reviews in the future.
 
 Built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
 
