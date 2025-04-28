@@ -1,0 +1,22 @@
+# Main Menu Configuration
+main:
+  - identifier: "lyrics"
+    name: "Lyrics"
+    url: "/lyrics/"
+    weight: 10
+  - identifier: "authors"
+    name: "Authors"
+    url: "/authors/" # Link to the list of all authors
+    weight: 20
+  - identifier: "genres"
+    name: "Genres"
+    url: "/genres/" # Link to the list of all genres (like Garba)
+    weight: 30
+  - identifier: "tags"
+    name: "Tags"
+    url: "/tags/" # Link to the list of all tags
+    weight: 40
+  - identifier: Search
+    name: Search
+    url: /search/
+    weight: 500

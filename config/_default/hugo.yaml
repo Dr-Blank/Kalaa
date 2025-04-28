@@ -1,0 +1,23 @@
+baseURL: "https://kala.drblank.dev/"
+languageCode: "en-us"
+title: "Kala | Dr.Blank's Art Corner"
+description: "A personal collection of lyrics, garba and discussions on pop culture."
+theme: "PaperMod" # <<< This is the key we'll change later
+
+# Define pagination size correctly
+pagination:
+  pagerSize: 10
+
+# Define the taxonomies you want to use
+taxonomies:
+  author: "authors"
+  genre: "genres"
+  tag: "tags"
+
+# Ensure Hugo generates list pages for taxonomies
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML", "RSS"]
+enableEmoji: true
