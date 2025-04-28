@@ -20,7 +20,7 @@ tags: [
 ]
 
 cover: # <<< REMINDER: UNCOMMENT & EDIT this section to add a cover image!
-  image: "cover.png" # Place 'cover.jpg' (or your image name) in this folder
+  image: "cover.jpeg" # Place 'cover.jpg' (or your image name) in this folder
   alt: "Radha and Krishna near a lake under moonlight for Aa Nabh Jhukyu"
 #   caption: "Optional caption for the image"
   relative: true # Keep this true for Page Bundles
