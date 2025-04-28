@@ -29,6 +29,9 @@ tags: [
 # "🪵 Dandiya Raas",
 # "☀️ Prabhatiya",
 # "✨ Navratri Special",
+# --- Adaptable Rhythms ---
+# "✅ 2-Taali Suitable",
+# "✅ 3-Taali Suitable",
 # --- Themes/Moods ---
 # "💕 Love",
 # "💔 Heartbreak",
@@ -88,4 +91,3 @@ Quick Reminders:
 
 <!-- ## Summary -->
 <!-- A brief, concise overview of the song's theme or message -->
-
