@@ -1,0 +1,18 @@
+{{/* layouts/shortcodes/abbr.html */}}
+{{ $term := .Get 0 }}
+{{ $definition := .Get 1 }}
+
+{{/* Use a consistent key, e.g., lowercase term */}}
+{{ $key := lower (printf "%s" $term) }}
+
+{{/* Get or initialize the glossary dictionary in the page's scratchpad */}}
+{{ $glossary := .Page.Scratch.Get "pageGlossary" | default dict }}
+
+{{/* Add term/definition if not already present (optional: overwrite like Method 1 if needed) */}}
+{{ if not (isset $glossary $key) }}
+{{ $glossary = merge $glossary (dict $key (dict "term" $term "definition" $definition)) }}
+{{ .Page.Scratch.Set "pageGlossary" $glossary }}
+{{ end }}
+
+{{/* Output the actual HTML abbr tag */}}
+<abbr title="{{ $definition | safeHTMLAttr }}">{{ $term | safeHTML }}</abbr>

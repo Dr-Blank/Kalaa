@@ -1,0 +1,118 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+
+  {{/* layouts/_default/single.html (after {{ .Content }}) */}}
+
+  {{/* Try to retrieve the glossary dictionary from the page's Scratch */}}
+  {{ with .Page.Scratch.Get "pageGlossary" }}
+  {{/* Check if the retrieved dictionary actually contains items */}}
+  {{ if gt (len .) 0 }}
+  <div class="page-glossary">
+    {{/* Add a heading for the glossary section */}}
+    <h2>Glossary</h2>
+    <dl>
+      {{/* Sort glossary items alphabetically by the 'term' key before ranging */}}
+      {{ range sort . "term" "asc" }}
+      <dt>{{ .term }}</dt>
+      <dd>{{ .definition }}</dd>
+      {{ end }}
+    </dl>
+  </div>
+  {{/* Optional: Add some basic styling directly here, or preferably in your custom CSS */}}
+  <style>
+    .page-glossary {
+      margin-top: 2.5em;
+      padding-top: 1.5em;
+      border-top: 1px solid var(--border-color);
+      /* Use theme variable if available */
+      font-size: 0.9em;
+    }
+
+    .page-glossary h2 {
+      font-size: 1.2em;
+      /* Slightly smaller than main headings */
+      margin-bottom: 1em;
+    }
+
+    .page-glossary dl dt {
+      font-weight: bold;
+    }
+
+    .page-glossary dl dd {
+      margin-left: 1.5em;
+      margin-bottom: 0.75em;
+      color: var(--secondary);
+      /* Use theme variable if available */
+    }
+  </style>
+  {{ end }}
+  {{/* Important: Clean up scratchpad for this page after use */}}
+  {{ $.Page.Scratch.Delete "pageGlossary" }}
+  {{ end }}
+
+  {{/* The rest of the original single.html template continues below */}}
+
+
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}
