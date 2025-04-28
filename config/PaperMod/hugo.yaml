@@ -4,13 +4,16 @@
 # disableThemeToggle: false # PaperMod setting
 params:
   homeInfoParams:
-    Title: Kalaa (Art) Corner 🎭
-    Content: Welcome! This space holds Gujarati lyrics, many Garba, along with
-      discussions and thoughts on their meaning and beauty.
+    Title: "Kalaa: Gujarati Art in Verse" # Explains and specifies focus
+    Content: > # Use > for a nice multi-line block in YAML
+      **Kalaa (કળા)** • **/kə.ɭɑː/** • _Gujarati: Art, Craft_<br><br>
+
+      Welcome to my personal corner! This space is dedicated to exploring 'Kalaa' – the art –
+      within Gujarati lyrical traditions. Discover curated lyrics (many Garba!), occasional film reviews, and musings on language, history, and culture through a Gujarati lens. Discover curated lyrics, delve into meanings, and share in the joy of expression."
 
   socialIcons:
     - name: github
-      url: https://github.com/Dr-Blank
+      url: https://github.com/Dr-Blank/Kalaa
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -35,3 +38,17 @@ params:
       - permalink
       - summary
       - content
+  label:
+    icon: "/image.png"
+    text: "Kalaa"
+
+  cover:
+    linkFullImages: true
+    responsiveImages: true
+    # hidden: true
+    # hiddenInList: true
+    # hiddenInSingle: true
+  # editPost:
+  #   URL: "https://github.com/Dr-Blank/Kalaa/tree/main/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
