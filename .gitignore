@@ -10,3 +10,21 @@
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+      
+# Hugo generated files
+public/
+resources/_gen/
+assets/jsconfig.json
+assets/scss/compiled/
+*.orig
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node Modules (if you use npm/yarn for theme assets)
+node_modules/
+
+# Hugo server temp file
+hugo_stats.json
