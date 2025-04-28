@@ -1,0 +1,12 @@
+{{/* layouts/shortcodes/authorlink.html */}}
+{{- $authorName := .Get 0 -}}
+{{- $linkText := $authorName -}} {{/* Default link text is the author name */}}
+{{- with .Get 1 }}{{ $linkText = . }}{{ end -}} {{/* Use second param for link text if provided */}}
+
+{{- if $authorName -}}
+{{- $slug := $authorName | strings.URLize -}} {{/* Generate URL slug from name */}}
+{{- $url := printf "/authors/%s/" $slug | relURL -}} {{/* Construct the URL */}}
+<a href="{{ $url }}">{{ $linkText }}</a>
+{{- else -}}
+{{- errorf "Author name missing in authorlink shortcode on page %s" .Page.Path -}}
+{{- end -}}

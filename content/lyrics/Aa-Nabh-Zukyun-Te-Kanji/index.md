@@ -1,8 +1,8 @@
 ---
-title: "આ નભ ઝૂક્યું તે કાનજી" # Auto-generated from filename
+title: "આ નભ ઝૂક્યું તે કાનજી by પ્રિયકાંત મણિયાર" # Auto-generated from filename
 date: 2025-04-28T15:17:53+05:30 # Auto-filled with current date/time
 draft: false # Start as draft, set to 'false' to publish
-authors: ["પ્રિયકાંત મણિયાર"] # IMPORTANT: Fill in the Lyricist(s) name(s), e.g., ["Avinash Vyas"]
+authors: ["Priyakant Maniyar"] # IMPORTANT: Fill in the Lyricist(s) name(s), e.g., ["Avinash Vyas"]
 
 # --- Genres ---
 # Choose 1-2 primary categories. Delete the rest for this post.
@@ -21,7 +21,7 @@ tags: [
 
 cover: # <<< REMINDER: UNCOMMENT & EDIT this section to add a cover image!
   image: "cover.png" # Place 'cover.jpg' (or your image name) in this folder
-  alt: "Radha and Krishna near a lake under moonlight"
+  alt: "Radha and Krishna near a lake under moonlight for Aa Nabh Jhukyu"
 #   caption: "Optional caption for the image"
   relative: true # Keep this true for Page Bundles
 ---
@@ -63,7 +63,7 @@ Quick Reminders:
 
 આ નભ ઝૂક્યું તે કાનજી…
 
-by [Priyakant Maniyar](/authors/પ્રિયકાંત-મણિયાર)
+\- [પ્રિયકાંત મણિયાર](/authors/priyakant-maniyar)
 
 ## Literal Interpretation / Translation
 

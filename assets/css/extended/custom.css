@@ -1,0 +1,27 @@
+/* assets/css/extended/custom.css or similar */
+.post-author-subtitle {
+    font-size: 0.9em;
+    /* Adjust size as needed */
+    color: var(--secondary);
+    /* Use theme's secondary text color */
+    margin-top: -0.5em;
+    /* Adjust spacing relative to title */
+    margin-bottom: 1em;
+    /* Add some space below */
+    font-style: italic;
+    /* Optional styling */
+}
+
+.post-author-subtitle a {
+    color: var(--secondary);
+    /* Make link color match surrounding text */
+    text-decoration: none;
+    /* Optional: remove underline */
+}
+
+.post-author-subtitle a:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+    color: var(--content);
+    /* Optional: change color on hover */
+}
