@@ -1,3 +1,35 @@
 # Site-wide parameters (apply regardless of theme, unless overridden)
 description: A personal collection of lyrics, garba and discussions on pop culture.
 author: Dr.Blank
+homeInfoParams:
+  Title: Kalaa (Art) Corner 🎭
+  Content: Welcome! This space holds Gujarati lyrics, many Garba, along with
+    discussions and thoughts on their meaning and beauty.
+
+socialIcons:
+  - name: github
+    url: https://github.com/Dr-Blank
+
+ShowReadingTime: true
+ShowShareButtons: true
+ShowPostNavLinks: true
+ShowBreadCrumbs: true
+ShowCodeCopyButtons: true
+ShowWordCount: false
+ShowRssButtonInSectionTermList: true
+ShowToc: true # Table of Contents
+TocOpen: false
+hideMeta: false # Ensure meta is generally shown
+hideTaxonomies: false # Ensure taxonomies are shown in meta
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.4
+  minMatchCharLength: 0
+  keys:
+    - title
+    - permalink
+    - summary
+    - content
