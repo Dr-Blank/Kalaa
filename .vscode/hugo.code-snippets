@@ -1,0 +1,11 @@
+// File: .vscode/hugo.code-snippets
+{
+    "Hugo Abbr Shortcode (Project)": {
+        "prefix": "habbr", // Optional: You could type 'habbr' and press Tab
+        "scope": "markdown", // Restricts to Markdown files within this project
+        "body": [
+            "{{< abbr \"$TM_SELECTED_TEXT\" \"${1:Enter Definition}\" >}}"
+        ],
+        "description": "Wrap selected text in Hugo abbr shortcode and prompt for definition (Project Specific)"
+    }
+}
