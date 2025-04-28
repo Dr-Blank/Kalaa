@@ -79,7 +79,7 @@ Quick Reminders:
 - This lamp that burns is Kanji, and the Aarti (ritual flame) is Radha,
 - These eyes of mine are Kanji, and the gaze that sees is Radha!
 
-## Recordings / Listen
+## Recordings
 
 This poem has been beautifully rendered by several artists. Here are a few popular versions:
 

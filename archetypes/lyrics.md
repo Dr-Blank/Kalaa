@@ -85,7 +85,7 @@ Quick Reminders:
 ## Literal Interpretation / Translation
 <!-- A more direct, word-for-word meaning or translation if possible/needed -->
 
-## Recordings / Listen
+## Recordings
 <!-- Add links to versions of the song (YouTube, Spotify, etc.) -->
 * [Example Artist - Example Song](youtube-link)
 
