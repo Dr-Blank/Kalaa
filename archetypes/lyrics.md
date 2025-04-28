@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}" # Auto-generated from filename
-date: {{ .Date }} # Auto-filled with current date/time
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
 draft: true # Start as draft, set to 'false' to publish
 authors: [""] # IMPORTANT: Fill in the Lyricist(s) name(s), e.g., ["Avinash Vyas"]
 
@@ -9,12 +9,13 @@ authors: [""] # IMPORTANT: Fill in the Lyricist(s) name(s), e.g., ["Avinash Vyas
 genres: [
 # "💃 Garba",
 # "🕺 Raas",
-# "🙏 Bhajan / Devotional",
-# "🌾 Folk Song / Lok Geet",
-# "🎶 Sugam Sangeet",
-# "🎬 Film Song / Filmi Geet",
-# "👶 Children's Song / Bal Geet",
-# "🌙 Lullaby / Halardu",
+# "🙏 Bhajan (Devotional)",
+# "✨ Poetry",
+# "🌾 Lok Geet (Folk Song)",
+# "🎶 Bhavgeet",
+# "🎬 Filmi Geet",
+# "👶 Bal Geet (Children's Song)",
+# "🌙 Halardu (Lullaby)",
 ]
 
 # --- Tags ---
@@ -29,22 +30,23 @@ tags: [
 # "☀️ Prabhatiya",
 # "✨ Navratri Special",
 # --- Themes/Moods ---
-# "💕 Love / Romance",
-# "💔 Heartbreak / Sadness",
-# "🌱 Life / Philosophy",
-# "😊 Joyful / Celebratory",
-# "🤔 Reflective / Thoughtful",
-# "💪 Inspirational / Motivational",
-# "😂 Humorous / Playful",
+# "💕 Love",
+# "💔 Heartbreak",
+# "life-philosophy",
+# "🥳 Celebratory",
+# "🤔 Reflective",
+# "💪 Inspirational",
+# "😂 Humorous",
 # --- Occasions ---
-# "🎉 Wedding / Lagna Geet",
+# "🎉 Lagna Geet (Wedding)",
 # "🎊 Festival Special",
-# "🌧️ Monsoon / Rainy Season",
+# "🌧️ Monsoon",
 # --- Other ---
-# "📜 Traditional / Paramparik",
-# "🗣️ Narrative / Story Song",
-# "🙏 Prayer / Prarthana",
+# "📜 Paramparik (Traditional)",
+# "🗣️ Narrative (Story Song)",
+# "🙏 Prarthana (Prayer)",
 # "🏞️ Nature Themed",
+# "༗ Radha-Krishna",
 ]
 
 # cover: # <<< REMINDER: UNCOMMENT & EDIT this section to add a cover image!
@@ -68,8 +70,8 @@ Quick Reminders:
 ## Lyrics (ગુજરાતી)
 <!-- Paste the full Gujarati lyrics here -->
 
-મારો સોનાનો...
-<abbr title="A small pot">ઘડુલો</abbr>
+<!-- adding a abbr -->
+મારો સોનાનો... {{< abbr Ghadulo "A small, traditional pot, used in Garba dance" >}}
 
 ## Explanation / Context
 <!-- Provide background info: Who sings it? When is it sung? Cultural significance? History? -->
@@ -84,10 +86,6 @@ Quick Reminders:
 <!-- Add links to versions of the song (YouTube, Spotify, etc.) -->
 * [Example Artist - Example Song](youtube-link)
 
-## Summary
+<!-- ## Summary -->
 <!-- A brief, concise overview of the song's theme or message -->
 
-## Dictionary / Word Meanings
-<!-- Define key Gujarati words using <abbr> or simple bolding -->
-* <abbr title="A small, traditional pot, often decorated, used in Garba dance">ઘડુલો (Ghadulo)</abbr>
-* **લોલ (Lol):** Interjection for rhythm/emphasis.
