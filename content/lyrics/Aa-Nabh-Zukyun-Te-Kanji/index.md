@@ -39,28 +39,20 @@ Quick Reminders:
 
 ## Lyrics (ગુજરાતી)
 
-આ {{< abbr "નભ" "Sky, Heavens" >}} ઝૂક્યું તે {{< abbr "કાનજી" "Lord Krishna" >}} ને {{< abbr "ચાંદની" "Moonlight" >}} તે રાધા રે,
-
-આ {{< abbr "સરવરજળ" "Lake water (Sarovar = Lake, Jal = Water)" >}} તે કાનજી ને {{< abbr "પોયણી" "Water Lily / Lotus" >}} તે રાધા રે,
-
+આ {{< abbr "નભ" "Sky, Heavens" >}} ઝૂક્યું તે {{< abbr "કાનજી" "Lord Krishna" >}} ને {{< abbr "ચાંદની" "Moonlight" >}} તે રાધા રે,\
+આ {{< abbr "સરવરજળ" "Lake water (Sarovar = Lake, Jal = Water)" >}} તે કાનજી ને {{< abbr "પોયણી" "Water Lily / Lotus" >}} તે રાધા રે,\
 આ નભ ઝૂક્યું તે કાનજી…
 
-આ બાગ ખીલ્યો તે કાનજી ને {{< abbr "લ્હેરી" "Breeze, wave (often of fragrance)" >}} જતી તે રાધા રે,
-
-આ પરવત-શિખર કાનજી ને {{< abbr "કેડી" "Path, Trail, Track" >}} ચડે તે રાધા રે,
-
+આ બાગ ખીલ્યો તે કાનજી ને {{< abbr "લ્હેરી" "Breeze, wave (often of fragrance)" >}} જતી તે રાધા રે,\
+આ પરવત-શિખર કાનજી ને {{< abbr "કેડી" "Path, Trail, Track" >}} ચડે તે રાધા રે,\
 આ નભ ઝૂક્યું તે કાનજી…
 
-આ ચાલ્યાં ચરણ તે કાનજી ને {{< abbr "પગલી" "Footprint" >}} પડે તે રાધા રે,
-
-આ કેશ {{< abbr "ગૂંથ્યા" "Tied Hair (Chotlo)" >}} તે કાનજી ને {{< abbr "સેંથી" "Parting line in the hair" >}} પૂરી તે રાધા રે,
-
+આ ચાલ્યાં ચરણ તે કાનજી ને {{< abbr "પગલી" "Footprint" >}} પડે તે રાધા રે,\
+આ કેશ {{< abbr "ગૂંથ્યા" "Tied Hair (Chotlo)" >}} તે કાનજી ને {{< abbr "સેંથી" "Parting line in the hair" >}} પૂરી તે રાધા રે,\
 આ નભ ઝૂક્યું તે કાનજી…
 
-આ {{< abbr "દીપ" "Lamp, Light" >}} જલે તે કાનજી ને આરતી તે રાધા રે,
-
-આ {{< abbr "લોચન" "Eyes" >}} મારાં કાનજી ને {{< abbr "નજરું" "Gaze, Sight, View" >}} જુએ તે રાધા રે!
-
+આ {{< abbr "દીપ" "Lamp, Light" >}} જલે તે કાનજી ને આરતી તે રાધા રે,\
+આ {{< abbr "લોચન" "Eyes" >}} મારાં કાનજી ને {{< abbr "નજરું" "Gaze, Sight, View" >}} જુએ તે રાધા રે!\
 આ નભ ઝૂક્યું તે કાનજી…
 
 \- [પ્રિયકાંત મણિયાર](/authors/priyakant-maniyar)
