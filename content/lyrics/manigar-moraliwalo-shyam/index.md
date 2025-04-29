@@ -119,7 +119,7 @@ Spread the melody of the flute, bliss pervaded
 
 ## Recordings
 <!-- Add links to versions of the song (YouTube, Spotify, etc.) -->
-* [Sachin Limaye - Manigar Murlivado](https://musicbrainz.org/recording/be0d2d23-853a-4ca9-a6d2-5b93c01bae45)
-  * probably the oldest version of this and is a studio recording
+* {{< mb type="recording" mbid="be0d2d23-853a-4ca9-a6d2-5b93c01bae45" text="Sachin Limaye - Manigar Murlivado" >}}
+  * probably the oldest version of this work
 <!-- ## Summary -->
 <!-- A brief, concise overview of the song's theme or message -->
