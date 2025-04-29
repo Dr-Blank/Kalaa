@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Hugo: New Content (Lyrics/Review/Language)", // Updated label
+            "type": "shell",
+            // The command now dynamically uses BOTH inputs
+            "command": "hugo new content ${input:contentType}/${input:contentSlug}/index.md",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [] // No need to parse output for this task
+        }
+    ],
+    "inputs": [
+        // First input: Choose the content type
+        {
+            "id": "contentType", // Unique ID for this input
+            "type": "pickString", // Presents a list of options
+            "description": "Select the type of content:", // Prompt text
+            "options": [ // The list of choices
+                "lyrics",
+                "reviews",
+                "language"
+                // Add more content types here if needed in the future
+            ],
+            "default": "lyrics" // Optional: Pre-selects 'lyrics'
+        },
+        // Second input: Enter the slug/name
+        {
+            "id": "contentSlug", // Unique ID for this input
+            "type": "promptString", // Asks for text input
+            "description": "Enter the URL-friendly slug (e.g., song-name or movie-title):", // Prompt text
+            "default": "new-post" // Optional: A default value
+        }
+    ]
+}
