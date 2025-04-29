@@ -40,6 +40,7 @@ tags: [
 # "🤔 Reflective",
 # "💪 Inspirational",
 # "😂 Humorous",
+# "😊 Natkhat (Mischievous)",
 # --- Occasions ---
 # "🎉 Lagna Geet (Wedding)",
 # "🎊 Festival Special",
@@ -75,6 +76,9 @@ Quick Reminders:
 
 <!-- adding a abbr -->
 મારો સોનાનો... {{< abbr Ghadulo "A small, traditional pot, used in Garba dance" >}}
+
+<!-- Add author attribution if confirmed -->
+<!-- \- [Author Name](/authors/author-slug) -->
 
 ## Explanation / Context
 <!-- Provide background info: Who sings it? When is it sung? Cultural significance? History? -->
