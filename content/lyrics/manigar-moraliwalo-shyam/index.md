@@ -53,11 +53,10 @@ tags: [
 "༗ Radha-Krishna",
 ]
 
-# cover:
-#   image: "cover.jpg"
-#   alt: "Krishna playing the flute"
-#   caption: "Manigar Morlivalo Shyam"
-#   relative: true
+cover:
+  image: "cover.jpeg"
+  alt: "Krishna playing the flute"
+  relative: true
 ---
 "Manigar Morlivalo Shyam" paints a vibrant picture of Lord Krishna (referred to by various names like Shyam, Kanudo, Nand no Lalo) focusing on his irresistible charm, playful nature (*Leela*), and divine attributes.
 
