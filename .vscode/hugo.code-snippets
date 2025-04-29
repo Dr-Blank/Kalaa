@@ -7,5 +7,13 @@
             "{{< abbr \"$TM_SELECTED_TEXT\" \"${1:Enter Definition}\" >}}"
         ],
         "description": "Wrap selected text in Hugo abbr shortcode and prompt for definition (Project Specific)"
+    },
+    "MusicBrainz Link (Project)": {
+        "prefix": "mbrainz", // Trigger by typing 'mbrainz' + Tab
+        "scope": "markdown",
+        "body": [
+            "{{< mb type=\"${1|artist,release,recording,work,label,release-group|}\" mbid=\"${2:Enter MBID}\" text=\"${3:${TM_SELECTED_TEXT:Link Text}}\" >}}"
+        ],
+        "description": "Insert MusicBrainz link shortcode"
     }
 }

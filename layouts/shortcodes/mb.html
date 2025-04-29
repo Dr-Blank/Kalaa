@@ -1,0 +1,43 @@
+{{/* layouts/shortcodes/mb.html */}}
+{{/* Parameters: type, mbid, text */}}
+
+{{ $type := .Get "type" | lower }}
+{{ $mbid := .Get "mbid" }}
+{{ $text := .Get "text" }}
+
+{{/* Basic validation */}}
+{{ $validTypes := slice "artist" "release" "recording" "work" "label" "area" "event" "series" "instrument"
+"release-group" }}
+{{ $isValidType := in $validTypes $type }}
+
+{{ if not $mbid }}
+{{ warnf "MusicBrainz shortcode used on page %q is missing required 'mbid' parameter." .Page.File.Path }}
+{{ return "" }}
+{{ end }}
+{{ if not $isValidType }}
+{{ warnf "MusicBrainz shortcode used on page %q has invalid 'type' parameter: %q. Valid types are: %s" .Page.File.Path
+$type (delimit $validTypes ", ") }}
+{{ return "" }}
+{{ end }}
+
+{{/* Construct the MusicBrainz URL */}}
+{{ $url := printf "https://musicbrainz.org/%s/%s" $type $mbid }}
+
+{{/* Determine display text */}}
+{{ $displayText := $text | default (printf "View %s on MusicBrainz" ($type | humanize)) }}
+{{ $ariaLabel := printf "View %s (%s) on MusicBrainz (opens in new tab)" $displayText $type }}
+
+{{/* URL for the raw external SVG icon */}}
+{{ $iconURL :=
+"https://raw.githubusercontent.com/metabrainz/design-system/master/brand/logos/MusicBrainz/SVG/MusicBrainz_logo_icon.svg"
+}}
+
+{{/* Construct the img tag for the external icon */}}
+{{/* Alt is empty as the link text describes the link, making the icon decorative */}}
+{{ $iconTag := printf `<img src="%s" width="16" height="16" alt="" style="vertical-align: -0.15em; margin-right: 0.2em;"
+    loading="lazy" decoding="async">` $iconURL }}
+
+<a href="{{ $url }}" class="musicbrainz-link" target="_blank" rel="noopener noreferrer external"
+    aria-label="{{ $ariaLabel }}">
+    {{ $iconTag | safeHTML }} {{ $displayText | safeHTML }}
+</a>

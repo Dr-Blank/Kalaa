@@ -25,3 +25,10 @@
     color: var(--content);
     /* Optional: change color on hover */
 }
+/* In your static/css/custom.css or similar */
+.musicbrainz-link {
+    display: inline-flex;
+    /* Align icon and text nicely */
+    align-items: center;
+    text-decoration: none;
+}
