@@ -48,32 +48,53 @@ abbr[title]::after {
     content: attr(title);
     /* Get the content from the title attribute */
     position: absolute;
-    left: 100%;
+    /* --- Positioning Strategy: Align with ABBR's left edge --- */
+    /* This primarily solves the left-edge cutoff problem. */
+    left: 0;
+    /* Align tooltip's left edge with the abbr's left edge. */
     bottom: 100%;
-    /* Position it above the abbr tag */
-    transform: translateX(-50%) translateY(-5px);
-    /* Center it horizontally and add a small gap */
+    /* Position tooltip directly above the abbr tag. */
+    margin-bottom: 6px;
+    /* Add a small gap between abbr and tooltip. */
+    /* Adjust this value as needed for spacing. */
 
     /* Tooltip appearance */
     background-color: var(--border);
     /* Dark background */
     color: var(--content);
     /* Light text */
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    /* Slightly smaller text */
-    white-space: nowrap;
-    /* Prevent the tooltip from wrapping to multiple lines */
-    z-index: 10;
-    /* Ensure it's above other content */
+    padding: 8px 12px;
+    /* Inner spacing (top/bottom, left/right) */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 0.875em;
+    /* Text size (e.g., 14px if base is 16px) */
+    line-height: 1.5;
+    /* Line spacing for better readability */
+    text-align: left;
+    /* Align text to the left within the tooltip */
 
-    /* Visibility - initially hidden */
+    /* --- Content Wrapping & Width Control --- */
+    white-space: normal;
+    /* IMPORTANT: Allow text to wrap to multiple lines */
+    width: max-content;
+    /* Tooltip width will be as wide as its content needs, up to max-width. */
+    max-width: 260px;
+    /* Maximum width of the tooltip. Adjust as needed. */
+    /* A smaller max-width makes it less likely to overflow on the right, */
+    /* but will make tooltips taller if content is long. */
+    box-sizing: border-box;
+    /* Ensures padding & border are included in width/max-width calculation */
+
+    z-index: 10;
+    /* Ensure tooltip is above other page content */
+
+    /* --- Visibility & Animation (Smooth Fade) --- */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     pointer-events: none;
-    /* So the tooltip itself doesn't interfere with other interactions */
+    /* The tooltip itself shouldn't capture mouse/touch events */
 }
 
 /* Show the tooltip when the abbr element is focused (tapped on mobile, or tabbed to on desktop) */
