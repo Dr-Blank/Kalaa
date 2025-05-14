@@ -25,10 +25,68 @@
     color: var(--content);
     /* Optional: change color on hover */
 }
+
 /* In your static/css/custom.css or similar */
 .musicbrainz-link {
     display: inline-flex;
     /* Align icon and text nicely */
     align-items: center;
     text-decoration: none;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    /* Or whatever your theme uses */
+    cursor: help;
+    /* Indicates more info is available */
+    position: relative;
+    /* Crucial for positioning the ::after pseudo-element */
+}
+
+/* Style for the tooltip itself - hidden by default */
+abbr[title]::after {
+    content: attr(title);
+    /* Get the content from the title attribute */
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    /* Position it above the abbr tag */
+    transform: translateX(-50%) translateY(-5px);
+    /* Center it horizontally and add a small gap */
+
+    /* Tooltip appearance */
+    background-color: var(--border);
+    /* Dark background */
+    color: var(--content);
+    /* Light text */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    /* Slightly smaller text */
+    white-space: nowrap;
+    /* Prevent the tooltip from wrapping to multiple lines */
+    z-index: 10;
+    /* Ensure it's above other content */
+
+    /* Visibility - initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    pointer-events: none;
+    /* So the tooltip itself doesn't interfere with other interactions */
+}
+
+/* Show the tooltip when the abbr element is focused (tapped on mobile, or tabbed to on desktop) */
+abbr[title]:focus::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional: Style the focus state of the abbr element itself */
+/* Be mindful of accessibility if you remove the default outline */
+abbr[title]:focus {
+    /* outline: 2px solid dodgerblue; */
+    /* Example custom focus outline */
+    outline: none;
+    /* Or remove it if your ::after provides enough indication */
 }

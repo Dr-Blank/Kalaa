@@ -8,11 +8,11 @@
 {{/* Get or initialize the glossary dictionary in the page's scratchpad */}}
 {{ $glossary := .Page.Scratch.Get "pageGlossary" | default dict }}
 
-{{/* Add term/definition if not already present (optional: overwrite like Method 1 if needed) */}}
+{{/* Add term/definition if not already present */}}
 {{ if not (isset $glossary $key) }}
 {{ $glossary = merge $glossary (dict $key (dict "term" $term "definition" $definition)) }}
 {{ .Page.Scratch.Set "pageGlossary" $glossary }}
 {{ end }}
 
-{{/* Output the actual HTML abbr tag */}}
-<abbr title="{{ $definition | safeHTMLAttr }}">{{ $term | safeHTML }}</abbr>
+{{/* Output the actual HTML abbr tag, now with tabindex="0" */}}
+<abbr title="{{ $definition | safeHTMLAttr }}" tabindex="0">{{ $term | safeHTML }}</abbr>
