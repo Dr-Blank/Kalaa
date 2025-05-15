@@ -111,3 +111,32 @@ abbr[title]:focus {
     outline: none;
     /* Or remove it if your ::after provides enough indication */
 }
+
+.ipa-notation {
+    font-family: "Charis SIL", "Doulos SIL", "Arial Unicode MS", sans-serif;
+    /* Common fonts for IPA characters */
+    /* color: var(--content); */
+    /* Optional: slightly different color */
+    /* background-color: #f9f9f9; */
+    /* Optional: slight background highlight */
+    /* padding: 0 2px; */
+    border: 1px dotted var(--border);
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.ipa-notation a {
+    text-decoration: none;
+    /* Or dotted underline if you prefer */
+    color: inherit;
+    /* Inherit color from surrounding text or .ipa-notation span */
+    /* border-bottom: 1px dotted #777; */
+    /* Example for a subtle link indicator */
+}
+
+.ipa-notation a:hover {
+    text-decoration: none;
+    border: 1px dotted var(--content);
+    /* color: var(--accent); */
+    /* Use your theme's accent color on hover if desired */
+}

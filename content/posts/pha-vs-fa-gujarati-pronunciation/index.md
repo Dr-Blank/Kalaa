@@ -29,9 +29,9 @@ cover:
 
 Have you ever noticed how the Gujarati letter **ફ** (pha) is often pronounced? Increasingly, especially among younger generations or those more exposed to English, I hear it sounding like "fa" – a sound typically made by touching the lower lip to the upper teeth (a labiodental fricative, like the 'f' in "fish").
 
-But wait... does Gujarati even *have* a native "fa" sound or a letter for it? The answer is no! The traditional Gujarati **ફ** is an **aspirated 'p' sound**, phonetically /pʰ/. It's made by bringing both lips together (bilabial), just like for **પ** (pa), but with an added puff of air, just like how you add a puff of air after saying "બ ba" to produce "ભ bha".
+But wait... does Gujarati even *have* a native "fa" sound or a letter for it? The answer is no! The traditional Gujarati **ફ** is an **aspirated 'p' sound**, phonetically {{< ipa "pʰ" >}}. It's made by bringing both lips together (bilabial), just like for **પ** (pa), but with an added puff of air, just like how you add a puff of air after saying "બ ba" to produce "ભ bha".
 
-This shift from the authentic **ફ** (/pʰ/) to "fa" (/f/) is quite widespread, and I find it fascinating and a little concerning.
+This shift from the authentic **ફ** ({{< ipa "pʰ" >}}) to "fa" ({{< ipa "f" >}}) is quite widespread, and I find it fascinating and a little concerning.
 
 ## Why is 'ફ' (pha) Turning into 'fa'?
 
@@ -39,14 +39,14 @@ Several factors might be contributing to this phonetic drift:
 
 ### The "Pha" Void in English
 
-Standard English doesn't really have the /pʰ/ sound as a distinct phoneme in the same way Gujarati does. The 'ph' in English words like "philosophy" or "physics" is pronounced /f/. When English speakers (or those heavily influenced by English phonology) encounter Gujarati sounds, they might map them to the closest English equivalent.
+Standard English doesn't really have the {{< ipa "pʰ" >}} sound as a distinct phoneme in the same way Gujarati does. The 'ph' in English words like "philosophy" or "physics" is pronounced {{< ipa "f" >}}. When English speakers (or those heavily influenced by English phonology) encounter Gujarati sounds, they might map them to the closest English equivalent.
 
 ### The Transliteration Trap (રોમન લિપિનું ગૂંચવણ - Roman Lipi nu Gunchvan)
 
 This, I believe, is a major culprit. When Gujarati is written in the Roman (Latin) script, **ફ** is almost universally transliterated as "pha."
 
-* English words starting with "ph-" (e.g., photo, pharmacy, phenomenon) are pronounced with an /f/ sound.
-* Naturally, when people see Gujarati words like "ફરી" written as "phari," they might instinctively pronounce the "ph" as /f/, leading to "fari."
+* English words starting with "ph-" (e.g., photo, pharmacy, phenomenon) are pronounced with an {{< ipa "f" >}} sound.
+* Naturally, when people see Gujarati words like "ફરી" written as "phari," they might instinctively pronounce the "ph" as {{< ipa "f" >}}, leading to "fari."
 * This habit then transfers back to when they speak or even read Gujarati in its native script. The visual cue of "ph" from English overrides the original Gujarati sound.
 * Furthermore, now that 'fa' is used in speaking it has now started being written as such, for e.g. 'fari' instead of 'phari', further exacerbating the issue.
 
@@ -56,7 +56,7 @@ One might argue it's disuse, like some other less common sounds. However, Gujara
 
 ## Examples of the 'Pha' to 'Fa' Shift
 
-Here are some common Gujarati words where the original **ફ** (/pʰ/) sound is often replaced with "fa" (/f/):
+Here are some common Gujarati words where the original **ફ** ({{< ipa "pʰ" >}}) sound is often replaced with "fa" ({{< ipa "f" >}}):
 
 * **ફરી** (phari) - again (Often heard as "fari")
 * **ફાગણ** (phāgaṇ) - a Gujarati month, spring (Often heard as "Fagan")
@@ -72,13 +72,13 @@ Remember the systematic grid of Gujarati consonants? (If not, you might want to 
 
 The letter **ફ** (pha) belongs to the **ઔષ્ઠ્ય (Auṣṭhya) - Labial** row. All sounds in this row are made by bringing the lips together:
 
-* **પ** (pa) - /p/ (voiceless, unaspirated)
-* **ફ** (pha) - /pʰ/ (voiceless, **aspirated**)
-* **બ** (ba) - /b/ (voiced, unaspirated)
-* **ભ** (bha) - /bʱ/ (voiced, aspirated)
-* **મ** (ma) - /m/ (nasal)
+* **પ** (pa) - {{< ipa "p" >}} (voiceless, unaspirated)
+* **ફ** (pha) - {{< ipa "pʰ" >}} (voiceless, **aspirated**)
+* **બ** (ba) - {{< ipa "b" >}} (voiced, unaspirated)
+* **ભ** (bha) - {{< ipa "bʱ" >}} (voiced, aspirated)
+* **મ** (ma) - {{< ipa "m" >}} (nasal)
 
-The sound /f/ (as in "fish") is a labio*dental* fricative – lower lip to upper teeth. It simply doesn't fit the pattern of the ઔષ્ઠ્ય (Auṣṭhya) row, which is entirely bilabial (both lips). This inherent structure of the Gujarati alphabet itself shows that **ફ** is intended as an aspirated **પ**, not an 'f' sound.
+The sound {{< ipa "f" >}} (as in "fish") is a labio*dental* fricative – lower lip to upper teeth. It simply doesn't fit the pattern of the ઔષ્ઠ્ય (Auṣṭhya) row, which is entirely bilabial (both lips). This inherent structure of the Gujarati alphabet itself shows that **ફ** is intended as an aspirated **પ**, not an 'f' sound.
 
 ## Language Evolves, But Do We Lose Something? 🤔
 
@@ -92,7 +92,7 @@ Do I correct people? Do I accept the change? It's a tricky balance. Sometimes, g
 
 This shift from **ફ** (pha) to "fa" is an ongoing linguistic phenomenon in Gujarati. It highlights the fascinating interplay between native phonology, contact with other languages (like English), and the impact of how we represent our language in different scripts.
 
-What have you observed? Do you consciously try to pronounce **ફ** as /pʰ/? I'd love to hear your thoughts in the comments below!
+What have you observed? Do you consciously try to pronounce **ફ** as {{< ipa "pʰ" >}}? I'd love to hear your thoughts in the comments below!
 
 ## Further Exploration 📚
 

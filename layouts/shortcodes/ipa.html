@@ -1,0 +1,21 @@
+{{- $ipa_spelling := .Get 0 -}}
+{{- $display_text := $ipa_spelling -}} {{/* Default display text is the IPA spelling itself */}}
+{{- if .Get 1 -}}
+{{- $display_text = .Get 1 -}} {{/* Allow optional second parameter for different display text */}}
+{{- end -}}
+
+{{- $search_query_raw := $ipa_spelling -}}
+{{/* Prepare a search query - keep some symbols for Google, remove others */}}
+{{- $search_query_for_google := $search_query_raw -}}
+{{/* Slashes and brackets are okay for Google search, it understands IPA context */}}
+{{/* No need to remove them for Google, unlike some more specific sites */}}
+
+{{- $google_search_link := printf "https://www.google.com/search?q=IPA+%s+pronunciation" (urlize
+$search_query_for_google) -}}
+
+<span class="ipa-notation">
+    <a href="{{ $google_search_link }}" target="_blank" rel="noopener noreferrer"
+        title="Search for {{ $ipa_spelling }} pronunciation on Google">
+        /{{- $display_text -}}/
+    </a>
+</span>
