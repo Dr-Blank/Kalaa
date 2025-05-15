@@ -25,13 +25,7 @@
   /* If accent is mustard, theme (white/dark) should work */
   border-color: var(--link-color);
   transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
-}
-
-.dark .post-footer .post-tags li a:hover,
-.dark .post-footer .post-tags li a:focus {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Darker shadow for dark mode */
+  box-shadow: 0 2px 14px var(--box-shadow-color);
 }
 
 /* --- Breadcrumbs Styling & Animation --- */
@@ -59,13 +53,14 @@
 /* --- Table of Contents (TOC) Styling & Animation --- */
 .toc {
   background-color: var(--code-bg);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .toc:hover {
   background-color: var(--entry);
   /* Optional: subtle highlight on hover */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 .toc details summary {
@@ -148,12 +143,9 @@
   transform: translateY(-0.3em);
   /* transform: translateY(-15px); */
   /* Slightly more lift */
-  box-shadow: 0 8px 16px var(--box-shadow-color);
+  box-shadow: 4px 4px 18px var(--box-shadow-color);
 }
 
-.dark .post-entry:hover {
-  box-shadow: 0 8px 20px var(--box-shadow-color);
-}
 .post-author-subtitle {
   font-size: 0.9em;
   /* Adjust size as needed */
