@@ -11,7 +11,7 @@ homeInfoParams:
 
 socialIcons:
   - name: github
-    url: https://github.com/Dr-Blank/Kalaa
+    url: https://github.com/Dr-Blank
 
 ShowReadingTime: true
 ShowShareButtons: true
@@ -52,3 +52,7 @@ cover:
 #   appendFilePath: true # to append file path to Edit link
 
 comments: true
+
+footer:
+  show: true
+  text: "Made with ❤️ by [Dr.Blank](https://github.com/Dr-Blank)"
