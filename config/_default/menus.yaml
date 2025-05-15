@@ -3,14 +3,14 @@ main:
   - identifier: "lyrics"
     name: "Lyrics"
     url: "/lyrics/"
-    weight: 10
+    weight: 20
+  - identifier: posts # New unique identifier
+    name: Posts # Or "Pronunciation", "Learn Language", etc.
+    url: /posts/
+    weight: 10 # Adjust weight to control order
   - identifier: "authors"
     name: "Authors"
     url: "/authors/" # Link to the list of all authors
-    weight: 20
-  - identifier: "genres"
-    name: "Genres"
-    url: "/genres/" # Link to the list of all genres (like Garba)
     weight: 30
   - identifier: "tags"
     name: "Tags"
