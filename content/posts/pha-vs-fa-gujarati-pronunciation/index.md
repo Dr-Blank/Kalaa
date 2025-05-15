@@ -1,5 +1,5 @@
 ---
-title: "The Curious Case of 'ફ' (pha) vs. 'fa' in Gujarati: A Sound Lost in Translation?"
+title: "The Curious Case of 'ફ' (pha) vs. 'fa' in Gujarati"
 slug: "pha-vs-fa-gujarati-pronunciation"
 date: 2025-05-15T10:42:53+05:30
 
