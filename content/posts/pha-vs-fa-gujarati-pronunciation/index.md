@@ -1,7 +1,7 @@
 ---
 title: "The Curious Case of 'ફ' (pha) vs. 'fa' in Gujarati: A Sound Lost in Translation?"
 slug: "pha-vs-fa-gujarati-pronunciation"
-date: 2025-05-15T15:42:53+05:30
+date: 2025-05-15T10:42:53+05:30
 
 # language_name: "Gujarati"
 # language_code: "gu"
