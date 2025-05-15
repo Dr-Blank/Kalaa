@@ -41,7 +41,7 @@ label:
   text: "Kalaa"
 
 cover:
-  linkFullImages: true
+  linkFullImages: false # unnecessary
   responsiveImages: true
   # hidden: true
   # hiddenInList: true
@@ -50,3 +50,5 @@ cover:
 #   URL: "https://github.com/Dr-Blank/Kalaa/tree/main/content"
 #   Text: "Suggest Changes" # edit text
 #   appendFilePath: true # to append file path to Edit link
+
+comments: true
