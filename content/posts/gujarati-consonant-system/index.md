@@ -38,14 +38,14 @@ This post dives into the beautifully organized system of Gujarati consonants (�
 
 English can be tricky:
 
-- 'c' is /k/ in "cat" but /s/ in "ice."
-- 'a' has many sounds: /æ/ ("cat"), /ɑː/ ("car"), /eɪ/ ("cake").
+- 'c' is {{< ipa "k" >}} in "cat" but {{< ipa "s" >}} in "ice."
+- 'a' has many sounds: {{< ipa "æ" >}} ("cat"), {{< ipa "ɑː" >}} ("car"), {{< ipa "eɪ" >}} ("cake").
 
-In Gujarati, if you see **ક** (ka), it's reliably /kə/ (an unaspirated 'k').
+In Gujarati, if you see **ક** (ka), it's reliably {{< ipa "kə" >}} (an unaspirated 'k').
 
-- **કમળ** (kamal - lotus): **ક** is /kə/.
-- **કાકા** (kākā - uncle): **ક** is /ka/.
-- Even as a "half-letter" like **ક્** in **શક્તિ** (shakti - power), it's still that core /k/ sound.
+- **કમળ** (kamal - lotus): **ક** is {{< ipa "kə" >}}.
+- **કાકા** (kākā - uncle): **ક** is {{< ipa "ka" >}}.
+- Even as a "half-letter" like **ક્** in **શક્તિ** (shakti - power), it's still that core {{< ipa "k" >}} sound.
 
 This consistency is a huge help for learners!
 
@@ -62,11 +62,11 @@ Let's explore this grid. The first five rows, known as **સ્પર્શ વ�
 
 | સ્થાન (Sthān) <br> Place of Articulation <br> (Mouth Position) | ૧ <br> અલ્પપ્રાણ અઘોષ <br> Voiceless Unaspirated <br> (IPA) | ૨ <br> મહાપ્રાણ અઘોષ <br> Voiceless Aspirated <br> (IPA) | ૩ <br> અલ્પપ્રાણ ઘોષ <br> Voiced Unaspirated <br> (IPA) | ૪ <br> મહાપ્રાણ ઘોષ <br> Voiced Aspirated <br> (IPA) | ૫ <br> અનુનાસિક ઘોષ <br> Voiced Nasal <br> (IPA) |
 | :---------------------------------------------------------------- | :-------------------------------------------------------------: | :--------------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: | :----------------------------------------------------------: |
-| **કંઠ્ય (Kaṇṭhya)** <br> Velar <br> *(Back of tongue to soft palate)* | **ક** (ka) <br> /k/                                             | **ખ** (kha) <br> /kʰ/                                            | **ગ** (ga) <br> /g/                                           | **ઘ** (gha) <br> /gʱ/                                           | **ઙ** (ṅa) <br> /ŋ/                                          |
-| **તાલવ્ય (Tālavya)** <br> Palatal <br> *(Blade of tongue to hard palate)* | **ચ** (cha) <br> /tʃ/                                            | **છ** (chha) <br> /tʃʰ/                                           | **જ** (ja) <br> /dʒ/                                          | **ઝ** (jha) <br> /dʒʱ/                                          | **ઞ** (ña) <br> /ɲ/                                          |
-| **મૂર્ધન્ય (Mūrdhanya)** <br> Retroflex <br> *(Tongue tip curls to roof)* | **ટ** (ṭa) <br> /ʈ/                                              | **ઠ** (ṭha) <br> /ʈʰ/                                             | **ડ** (ḍa) <br> /ɖ/                                            | **ઢ** (ḍha) <br> /ɖʱ/                                            | **ણ** (ṇa) <br> /ɳ/                                          |
-| **દંત્ય (Dantya)** <br> Dental <br> *(Tongue tip to upper teeth)* | **ત** (ta) <br> /t̪/                                             | **થ** (tha) <br> /t̪ʰ/                                            | **દ** (da) <br> /d̪/                                           | **ધ** (dha) <br> /d̪ʱ/                                           | **ન** (na) <br> /n̪/                                          |
-| **ઔષ્ઠ્ય (Auṣṭhya)** <br> Labial <br> *(Lips together)* | **પ** (pa) <br> /p/                                              | **ફ** (pha) <br> /pʰ/                                             | **બ** (ba) <br> /b/                                            | **ભ** (bha) <br> /bʱ/                                            | **મ** (ma) <br> /m/                                          |
+| **કંઠ્ય (Kaṇṭhya)** <br> Velar <br> *(Back of tongue to soft palate)* | **ક** (ka) <br> {{< ipa "k" >}}                                             | **ખ** (kha) <br> {{< ipa "kʰ" >}}                                            | **ગ** (ga) <br> {{< ipa "g" >}}                                           | **ઘ** (gha) <br> {{< ipa "gʱ" >}}                                           | **ઙ** (ṅa) <br> {{< ipa "ŋ" >}}                                          |
+| **તાલવ્ય (Tālavya)** <br> Palatal <br> *(Blade of tongue to hard palate)* | **ચ** (cha) <br> {{< ipa "tʃ" >}}                                            | **છ** (chha) <br> {{< ipa "tʃʰ" >}}                                           | **જ** (ja) <br> {{< ipa "dʒ" >}}                                          | **ઝ** (jha) <br> {{< ipa "dʒʱ" >}}                                          | **ઞ** (ña) <br> {{< ipa "ɲ" >}}                                          |
+| **મૂર્ધન્ય (Mūrdhanya)** <br> Retroflex <br> *(Tongue tip curls to roof)* | **ટ** (ṭa) <br> {{< ipa "ʈ" >}}                                              | **ઠ** (ṭha) <br> {{< ipa "ʈʰ" >}}                                             | **ડ** (ḍa) <br> {{< ipa "ɖ" >}}                                            | **ઢ** (ḍha) <br> {{< ipa "ɖʱ" >}}                                            | **ણ** (ṇa) <br> {{< ipa "ɳ" >}}                                          |
+| **દંત્ય (Dantya)** <br> Dental <br> *(Tongue tip to upper teeth)* | **ત** (ta) <br> {{< ipa "t̪" >}}                                             | **થ** (tha) <br> {{< ipa "t̪ʰ" >}}                                            | **દ** (da) <br> {{< ipa "d̪" >}}                                           | **ધ** (dha) <br> {{< ipa "d̪ʱ" >}}                                           | **ન** (na) <br> {{< ipa "n̪" >}}                                          |
+| **ઔષ્ઠ્ય (Auṣṭhya)** <br> Labial <br> *(Lips together)* | **પ** (pa) <br> {{< ipa "p" >}}                                              | **ફ** (pha) <br> {{< ipa "pʰ" >}}                                             | **બ** (ba) <br> {{< ipa "b" >}}                                            | **ભ** (bha) <br> {{< ipa "bʱ" >}}                                            | **મ** (ma) <br> {{< ipa "m" >}}                                          |
 
 ---
 
@@ -103,23 +103,23 @@ Let's explore this grid. The first five rows, known as **સ્પર્શ વ�
 Beyond the 5x5 grid, we have these "unclassified" consonants:
 
 - **Approximants/Semi-vowels (અંતઃસ્થ - Antaḥstha):** Vowel-like, but act as consonants.
-  - **ય (ya)** - /j/ (Palatal Approximant)
-  - **ર (ra)** - /r/ (Alveolar Trill/Tap)
-  - **લ (la)** - /l/ (Alveolar Lateral Approximant)
-  - **વ (va)** - /ʋ/ or /w/ (Labiodental Approximant)
+  - **ય (ya)** - {{< ipa "j" >}} (Palatal Approximant)
+  - **ર (ra)** - {{< ipa "r" >}} (Alveolar Trill/Tap)
+  - **લ (la)** - {{< ipa "l" >}} (Alveolar Lateral Approximant)
+  - **વ (va)** - {{< ipa "ʋ" >}} or {{< ipa "w" >}} (Labiodental Approximant)
 
 - **Fricatives/Sibilants (ઉષ્માક્ષર - Ūṣmākṣar):** Air forced through a narrow channel.
-  - **શ (sha)** - /ʃ/ (Palato-alveolar Fricative)
-  - **ષ (ṣha)** - /ʂ/ (Retroflex Fricative) - Often merges with શ in modern speech but can be distinguished by visualising it in the approximate grid, see below for the new grid.
-  - **સ (sa)** - /s/ (Alveolar Fricative)
-  - **હ (ha)** - /ɦ/ (Voiced Glottal Fricative) or /h/ (Voiceless)
+  - **શ (sha)** - {{< ipa "ʃ" >}} (Palato-alveolar Fricative)
+  - **ષ (ṣha)** - {{< ipa "ʂ" >}} (Retroflex Fricative) - Often merges with શ in modern speech but can be distinguished by visualising it in the approximate grid, see below for the new grid.
+  - **સ (sa)** - {{< ipa "s" >}} (Alveolar Fricative)
+  - **હ (ha)** - {{< ipa "ɦ" >}} (Voiced Glottal Fricative) or {{< ipa "h" >}} (Voiceless)
 
 - **Special Case:**
-  - **ળ (ḷa)** - /ɭ/ (Retroflex Lateral Approximant) - That unique Gujarati 'L'!
+  - **ળ (ḷa)** - {{< ipa "ɭ" >}} (Retroflex Lateral Approximant) - That unique Gujarati 'L'!
 
 - **Common Conjuncts (જોડાક્ષર - Joḍākṣar):**
-  - **ક્ષ (kṣha)** - ક્ + ષ (/kʂ/)
-  - **જ્ઞ (jña/gya)** - જ્ + ञ (/ɡɲ/ or /dʒɲ/)
+  - **ક્ષ (kṣha)** - ક્ + ષ ({{< ipa "kʂ" >}})
+  - **જ્ઞ (jña/gya)** - જ્ + ञ ({{< ipa "ɡɲ" >}} or {{< ipa "dʒɲ" >}})
 
 ## An Expanded (Conceptual) Grid 🧩
 
@@ -127,11 +127,11 @@ If we were *forced* to try and fit the Approximants and Fricatives into a grid b
 
 | સ્થાન (Sthān) <br> Place of Articulation | ૧ <br> Voiceless Unaspirated | ૨ <br> Voiceless Aspirated | ૩ <br> Voiced Unaspirated | ૪ <br> Voiced Aspirated | ૫ <br> Nasal | ૬ <br> Approximant | ૭ <br> Fricative |
 | :--------------------------------------- | :--------------------------: | :-------------------------: | :-----------------------: | :----------------------: | :----------: | :----------------: | :---------------: |
-| **કંઠ્ય (Kaṇṭhya)** <br> Velar             | **ક** /k/                    | **ખ** /kʰ/                  | **ગ** /g/                 | **ઘ** /gʱ/              | **ઙ** /ŋ/    |                    | **હ** /ɦ/ or /h/¹ |
-| **તાલવ્ય (Tālavya)** <br> Palatal         | **ચ** /tʃ/                   | **છ** /tʃʰ/                 | **જ** /dʒ/                | **ઝ** /dʒʱ/             | **ઞ** /ɲ/    | **ય** /j/          | **શ** /ʃ/         |
-| **મૂર્ધન્ય (Mūrdhanya)** <br> Retroflex   | **ટ** /ʈ/                    | **ઠ** /ʈʰ/                  | **ડ** /ɖ/                 | **ઢ** /ɖʱ/              | **ણ** /ɳ/    | **ળ** /ɭ/², **ર** /r/² | **ષ** /ʂ/         |
-| **દંત્ય (Dantya)** <br> Dental           | **ત** /t̪/                    | **થ** /t̪ʰ/                 | **દ** /d̪/                 | **ધ** /d̪ʱ/              | **ન** /n̪/    | **લ** /l/²         | **સ** /s/²        |
-| **ઔષ્ઠ્ય (Auṣṭhya)** <br> Labial           | **પ** /p/                    | **ફ** /pʰ/                  | **બ** /b/                 | **ભ** /bʱ/              | **મ** /m/    | **વ** /ʋ/³         |                   |
+| **કંઠ્ય (Kaṇṭhya)** <br> Velar             | **ક** {{< ipa "k" >}}                    | **ખ** {{< ipa "kʰ" >}}                  | **ગ** {{< ipa "g" >}}                 | **ઘ** {{< ipa "gʱ" >}}              | **ઙ** {{< ipa "ŋ" >}}    |                    | **હ** {{< ipa "ɦ" >}} or {{< ipa "h" >}}¹ |
+| **તાલવ્ય (Tālavya)** <br> Palatal         | **ચ** {{< ipa "tʃ" >}}                   | **છ** {{< ipa "tʃʰ" >}}                 | **જ** {{< ipa "dʒ" >}}                | **ઝ** {{< ipa "dʒʱ" >}}             | **ઞ** {{< ipa "ɲ" >}}    | **ય** {{< ipa "j" >}}          | **શ** {{< ipa "ʃ" >}}         |
+| **મૂર્ધન્ય (Mūrdhanya)** <br> Retroflex   | **ટ** {{< ipa "ʈ" >}}                    | **ઠ** {{< ipa "ʈʰ" >}}                  | **ડ** {{< ipa "ɖ" >}}                 | **ઢ** {{< ipa "ɖʱ" >}}              | **ણ** {{< ipa "ɳ" >}}    | **ળ** {{< ipa "ɭ" >}}², **ર** {{< ipa "r" >}}² | **ષ** {{< ipa "ʂ" >}}         |
+| **દંત્ય (Dantya)** <br> Dental           | **ત** {{< ipa "t̪" >}}                    | **થ** {{< ipa "t̪ʰ" >}}                 | **દ** {{< ipa "d̪" >}}                 | **ધ** {{< ipa "d̪ʱ" >}}              | **ન** {{< ipa "n̪" >}}    | **લ** {{< ipa "l" >}}²         | **સ** {{< ipa "s" >}}²        |
+| **ઔષ્ઠ્ય (Auṣṭhya)** <br> Labial           | **પ** {{< ipa "p" >}}                    | **ફ** {{< ipa "pʰ" >}}                  | **બ** {{< ipa "b" >}}                 | **ભ** {{< ipa "bʱ" >}}              | **મ** {{< ipa "m" >}}    | **વ** {{< ipa "ʋ" >}}³         |                   |
 
 **Notes on Expanded Grid:**
 ¹ **હ (ha)** is glottal, but often grouped here for simplicity.
