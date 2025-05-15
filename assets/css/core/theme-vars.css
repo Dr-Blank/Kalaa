@@ -1,0 +1,148 @@
+/* assets/css/core/theme-vars.css */
+
+/* Your New Custom Color Palette Definitions */
+:root {
+  /* Peacock Palette (these are for reference or direct use if needed) */
+  --peacock-blue-deep-h: 197;
+  --peacock-blue-deep-s: 100%;
+  --peacock-blue-deep-l: 27%;
+  /* Deep blue for peacock */
+  --peacock-blue-darker-h: 200;
+  --peacock-blue-darker-s: 78%;
+  --peacock-blue-darker-l: 21%;
+  /* Add for other peacock colors if you plan to use them similarly */
+  --peacock-green-h: 170;
+  --peacock-green-s: 65%;
+  --peacock-green-l: 41%;
+  --peacock-mustard-h: 37;
+  --peacock-mustard-s: 74%;
+  --peacock-mustard-l: 61%;
+
+  --peacock-blue-deep: hsl(
+    var(--peacock-blue-deep-h),
+    var(--peacock-blue-deep-s),
+    var(--peacock-blue-deep-l)
+  );
+  --peacock-green: hsl(
+    var(--peacock-green-h),
+    var(--peacock-green-s),
+    var(--peacock-green-l)
+  );
+  --peacock-blue-darker: hsl(
+    var(--peacock-blue-darker-h),
+    var(--peacock-blue-darker-s),
+    var(--peacock-blue-darker-l)
+  );
+  --peacock-mustard: hsl(
+    var(--peacock-mustard-h),
+    var(--peacock-mustard-s),
+    var(--peacock-mustard-l)
+  );
+
+  /* Light Theme (Sepia-like) - Mapping to PaperMod's variables */
+  --theme: hsl(var(--peacock-mustard-h), 60%, 95%);
+  /* Very light mustard/cream */
+  --entry: hsl(var(--peacock-mustard-h), 60%, 98%);
+  /* Even lighter for entries */
+  --primary: hsl(var(--peacock-mustard-h), 20%, 25%);
+  /* Dark desaturated mustard/brown */
+  --secondary: hsl(var(--peacock-mustard-h), 15%, 45%);
+  /* Lighter desaturated mustard/brown */
+  --tertiary: hsl(var(--peacock-mustard-h), 30%, 80%);
+  /* A sepia tertiary for subtle elements - adjust as needed */
+  --content: hsl(var(--peacock-mustard-h), 20%, 20%);
+  /* Slightly darker for main content */
+  --link-color: var(--peacock-green);
+  /* Green for links */
+  --link-hover-color: var(--peacock-blue-deep);
+  /* Deep blue for link hover */
+  --accent-color: var(--peacock-mustard);
+  /* Your mustard yellow as main accent */
+  --code-bg: hsl(var(--peacock-mustard-h), 40%, 92%);
+  /* Slightly darker sepia for code */
+  --code-block-bg: hsl(var(--peacock-mustard-h), 35%, 88%);
+  /* Even darker for code blocks */
+  --border: hsl(var(--peacock-mustard-h), 30%, 85%);
+  /* Light sepia border */
+
+  /* box shadows */
+  --box-shadow-alpha: 0.08;
+  --box-shadow-color: hsla(
+    var(--peacock-blue-deep-h),
+    var(--peacock-blue-deep-s),
+    var(--peacock-blue-deep-l),
+    var(--box-shadow-alpha)
+  );
+
+  /* Retain PaperMod's structural variables or adjust if necessary */
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 8px;
+  /* You can also theme this, e.g., 4px for sharper, 0 for none */
+}
+
+.dark {
+  /* Dark Theme (Dark Blue Hint) - Mapping to PaperMod's variables */
+  --theme: hsl(var(--peacock-blue-darker-h), 30%, 8%);
+  /* Very dark blue/almost black */
+  --entry: hsl(var(--peacock-blue-darker-h), 30%, 12%);
+  /* Slightly lighter dark blue */
+  --primary: hsl(var(--peacock-blue-darker-h), 25%, 88%);
+  /* Light grayish blue */
+  --secondary: hsl(var(--peacock-blue-darker-h), 15%, 65%);
+  /* Muted grayish blue */
+  --tertiary: hsl(var(--peacock-blue-darker-h), 20%, 25%);
+  /* A dark blue tertiary for subtle elements */
+  --content: hsl(var(--peacock-blue-darker-h), 25%, 92%);
+  /* Slightly brighter for main content */
+  --link-color: var(--peacock-mustard);
+  /* Mustard for links in dark mode */
+  --link-hover-color: var(--peacock-green);
+  /* Green for link hover in dark mode */
+  --accent-color: var(--peacock-mustard);
+  /* Mustard yellow as main accent */
+  --code-bg: hsl(var(--peacock-blue-darker-h), 25%, 15%);
+  /* Darker blue for code */
+  --code-block-bg: hsl(var(--peacock-blue-darker-h), 30%, 10%);
+  /* Slightly different from theme for code blocks */
+  --border: hsl(var(--peacock-blue-darker-h), 20%, 20%);
+  /* Dark blue border */
+  /* box shadows */
+  --box-shadow-alpha: 0.3;
+  --box-shadow-color: hsla(
+    var(--peacock-mustard-h),
+    var(--peacock-mustard-s),
+    var(--peacock-mustard-l),
+    var(--box-shadow-alpha)
+  );
+}
+
+/* Keep these if PaperMod uses them for specific list styling, or adapt */
+.list {
+  background: var(--entry);
+  /* Use --entry for list background for consistency */
+}
+
+/* .dark.list might not be needed if .list background uses --entry which changes with dark mode */
+/* If PaperMod specifically targets .dark.list, you can keep it or ensure it uses a dark var */
+.dark.list {
+  background: var(--entry);
+  /* Or var(--theme) if that's intended for lists in dark */
+}
+
+/* Add any NEW variables you need specific to your theme that PaperMod doesn't have */
+/* For example, if you need more accent shades: */
+/*
+:root {
+    --accent-light: hsl(var(--peacock-mustard-h), 74%, 75%);
+    --accent-dark: hsl(var(--peacock-mustard-h), 74%, 50%);
+}
+.dark {
+    --accent-light: hsl(var(--peacock-mustard-h), 74%, 70%);
+    --accent-dark: hsl(var(--peacock-mustard-h), 74%, 55%);
+}
+*/

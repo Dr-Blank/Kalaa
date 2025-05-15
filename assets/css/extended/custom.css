@@ -1,142 +1,297 @@
-/* assets/css/extended/custom.css or similar */
+/* assets/css/extended/custom.css */
+
+/* --- Post Tags (in footer of post) Animation & Styling --- */
+.post-footer .post-tags li a {
+  display: inline-block;
+  /* For transform and better padding */
+  padding: 5px 10px;
+  margin: 3px;
+  background-color: var(--code-bg);
+  /* Using a subtle background from your theme */
+  color: var(--secondary);
+  /* Text color for tags */
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.post-footer .post-tags li a:hover,
+.post-footer .post-tags li a:focus {
+  background-color: var(--theme);
+  color: var(--primary);
+  /* Text color that contrasts well with your accent */
+  /* If accent is mustard, theme (white/dark) should work */
+  border-color: var(--link-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+.dark .post-footer .post-tags li a:hover,
+.dark .post-footer .post-tags li a:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Darker shadow for dark mode */
+}
+
+/* --- Breadcrumbs Styling & Animation --- */
+.breadcrumbs {
+  margin-bottom: var(--content-gap);
+  font-size: 0.9em;
+  color: var(--secondary);
+}
+
+.breadcrumbs a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+  position: relative;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: var(--link-color);
+  /* Or --accent-color */
+  /* padding-left: 3px; */
+  /* Subtle shift effect */
+}
+
+/* --- Table of Contents (TOC) Styling & Animation --- */
+.toc {
+  background-color: var(--code-bg);
+  transition: background-color 0.2s ease;
+}
+
+.toc:hover {
+  background-color: var(--entry);
+  /* Optional: subtle highlight on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toc details summary {
+  padding: 5px 30px;
+  font-weight: bold;
+  list-style: none;
+  /* Remove default marker */
+  position: relative;
+  /* For custom marker */
+}
+
+/* Custom disclosure marker */
+.toc details summary::before {
+  content: "↪";
+  /* Right-pointing triangle */
+  position: absolute;
+  left: 10px;
+  /* Align with padding */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--secondary);
+}
+
+.toc details[open] summary::before {
+  transform: translateY(-50%) rotateZ(90deg) rotateX(180deg);
+  /* Down-pointing triangle when open */
+}
+
+.toc .inner {
+  padding: 0px 15px 15px 30px;
+  /* Indent links more */
+}
+
+.toc .inner ul {
+  /* list-style: none; */
+  padding-left: 0;
+  /* Reset default ul padding */
+}
+
+.toc .inner ul ul {
+  /* Nested lists for sub-headings */
+  padding-left: 20px;
+  /* Indent sub-items */
+  margin-top: 5px;
+}
+
+.toc .inner li a {
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  border-radius: calc(var(--radius) / 2);
+  transition: background-color 0.2s ease, color 0.2s ease,
+    padding-left 0.2s ease;
+  padding-left: 5px;
+  /* Initial padding */
+}
+
+.toc .inner li a:hover,
+.toc .inner li a:focus {
+  color: var(--link-hover-color);
+  /* Or --accent-color */
+  background-color: var(--code-bg);
+  /* Subtle highlight for link area */
+  padding-left: 7px;
+  /* Indent on hover */
+}
+
+/* --- Entry Card Hover Animation (from previous, targeting .post-entry) --- */
+.post-entry {
+  /* This class is used by PaperMod for list items on homepage/archives */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* border-radius: var(--radius); */
+  /* Already applied by PaperMod */
+}
+
+.post-entry:hover {
+  transform: translateY(-0.3em);
+  /* transform: translateY(-15px); */
+  /* Slightly more lift */
+  box-shadow: 0 8px 16px var(--box-shadow-color);
+}
+
+.dark .post-entry:hover {
+  box-shadow: 0 8px 20px var(--box-shadow-color);
+}
 .post-author-subtitle {
-    font-size: 0.9em;
-    /* Adjust size as needed */
-    color: var(--secondary);
-    /* Use theme's secondary text color */
-    margin-top: -0.5em;
-    /* Adjust spacing relative to title */
-    margin-bottom: 1em;
-    /* Add some space below */
-    font-style: italic;
-    /* Optional styling */
+  font-size: 0.9em;
+  /* Adjust size as needed */
+  color: var(--secondary);
+  /* Use theme's secondary text color */
+  margin-top: -0.5em;
+  /* Adjust spacing relative to title */
+  margin-bottom: 1em;
+  /* Add some space below */
+  font-style: italic;
+  /* Optional styling */
 }
 
 .post-author-subtitle a {
-    color: var(--secondary);
-    /* Make link color match surrounding text */
-    text-decoration: none;
-    /* Optional: remove underline */
+  color: var(--secondary);
+  /* Make link color match surrounding text */
+  text-decoration: none;
+  /* Optional: remove underline */
 }
 
 .post-author-subtitle a:hover {
-    text-decoration: underline;
-    /* Add underline on hover */
-    color: var(--content);
-    /* Optional: change color on hover */
+  text-decoration: underline;
+  /* Add underline on hover */
+  color: var(--content);
+  /* Optional: change color on hover */
 }
 
 /* In your static/css/custom.css or similar */
 .musicbrainz-link {
-    display: inline-flex;
-    /* Align icon and text nicely */
-    align-items: center;
-    text-decoration: none;
+  display: inline-flex;
+  /* Align icon and text nicely */
+  align-items: center;
+  text-decoration: none;
 }
 
 abbr[title] {
-    text-decoration: underline dotted;
-    /* Or whatever your theme uses */
-    cursor: help;
-    /* Indicates more info is available */
-    position: relative;
-    /* Crucial for positioning the ::after pseudo-element */
+  text-decoration: underline dotted;
+  /* Or whatever your theme uses */
+  cursor: help;
+  /* Indicates more info is available */
+  position: relative;
+  /* Crucial for positioning the ::after pseudo-element */
 }
 
 /* Style for the tooltip itself - hidden by default */
 abbr[title]::after {
-    content: attr(title);
-    /* Get the content from the title attribute */
-    position: absolute;
-    /* --- Positioning Strategy: Align with ABBR's left edge --- */
-    /* This primarily solves the left-edge cutoff problem. */
-    left: 0;
-    /* Align tooltip's left edge with the abbr's left edge. */
-    bottom: 100%;
-    /* Position tooltip directly above the abbr tag. */
-    margin-bottom: 6px;
-    /* Add a small gap between abbr and tooltip. */
-    /* Adjust this value as needed for spacing. */
+  content: attr(title);
+  /* Get the content from the title attribute */
+  position: absolute;
+  /* --- Positioning Strategy: Align with ABBR's left edge --- */
+  /* This primarily solves the left-edge cutoff problem. */
+  left: 0;
+  /* Align tooltip's left edge with the abbr's left edge. */
+  bottom: 100%;
+  /* Position tooltip directly above the abbr tag. */
+  margin-bottom: 6px;
+  /* Add a small gap between abbr and tooltip. */
+  /* Adjust this value as needed for spacing. */
 
-    /* Tooltip appearance */
-    background-color: var(--border);
-    /* Dark background */
-    color: var(--content);
-    /* Light text */
-    padding: 8px 12px;
-    /* Inner spacing (top/bottom, left/right) */
-    border-radius: 5px;
-    /* Rounded corners */
-    font-size: 0.875em;
-    /* Text size (e.g., 14px if base is 16px) */
-    line-height: 1.5;
-    /* Line spacing for better readability */
-    text-align: left;
-    /* Align text to the left within the tooltip */
+  /* Tooltip appearance */
+  background-color: var(--border);
+  /* Dark background */
+  color: var(--content);
+  /* Light text */
+  padding: 8px 12px;
+  /* Inner spacing (top/bottom, left/right) */
+  border-radius: 5px;
+  /* Rounded corners */
+  font-size: 0.875em;
+  /* Text size (e.g., 14px if base is 16px) */
+  line-height: 1.5;
+  /* Line spacing for better readability */
+  text-align: left;
+  /* Align text to the left within the tooltip */
 
-    /* --- Content Wrapping & Width Control --- */
-    white-space: normal;
-    /* IMPORTANT: Allow text to wrap to multiple lines */
-    width: max-content;
-    /* Tooltip width will be as wide as its content needs, up to max-width. */
-    max-width: 260px;
-    /* Maximum width of the tooltip. Adjust as needed. */
-    /* A smaller max-width makes it less likely to overflow on the right, */
-    /* but will make tooltips taller if content is long. */
-    box-sizing: border-box;
-    /* Ensures padding & border are included in width/max-width calculation */
+  /* --- Content Wrapping & Width Control --- */
+  white-space: normal;
+  /* IMPORTANT: Allow text to wrap to multiple lines */
+  width: max-content;
+  /* Tooltip width will be as wide as its content needs, up to max-width. */
+  max-width: 260px;
+  /* Maximum width of the tooltip. Adjust as needed. */
+  /* A smaller max-width makes it less likely to overflow on the right, */
+  /* but will make tooltips taller if content is long. */
+  box-sizing: border-box;
+  /* Ensures padding & border are included in width/max-width calculation */
 
-    z-index: 10;
-    /* Ensure tooltip is above other page content */
+  z-index: 10;
+  /* Ensure tooltip is above other page content */
 
-    /* --- Visibility & Animation (Smooth Fade) --- */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    pointer-events: none;
-    /* The tooltip itself shouldn't capture mouse/touch events */
+  /* --- Visibility & Animation (Smooth Fade) --- */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  pointer-events: none;
+  /* The tooltip itself shouldn't capture mouse/touch events */
 }
 
 /* Show the tooltip when the abbr element is focused (tapped on mobile, or tabbed to on desktop) */
 abbr[title]:focus::after {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Optional: Style the focus state of the abbr element itself */
 /* Be mindful of accessibility if you remove the default outline */
 abbr[title]:focus {
-    /* outline: 2px solid dodgerblue; */
-    /* Example custom focus outline */
-    outline: none;
-    /* Or remove it if your ::after provides enough indication */
+  /* outline: 2px solid dodgerblue; */
+  /* Example custom focus outline */
+  outline: none;
+  /* Or remove it if your ::after provides enough indication */
 }
 
 .ipa-notation {
-    font-family: "Charis SIL", "Doulos SIL", "Arial Unicode MS", sans-serif;
-    /* Common fonts for IPA characters */
-    /* color: var(--content); */
-    /* Optional: slightly different color */
-    /* background-color: #f9f9f9; */
-    /* Optional: slight background highlight */
-    /* padding: 0 2px; */
-    border: 1px dotted var(--border);
-    border-radius: 3px;
-    text-decoration: none;
+  font-family: "Charis SIL", "Doulos SIL", "Arial Unicode MS", sans-serif;
+  /* Common fonts for IPA characters */
+  /* color: var(--content); */
+  /* Optional: slightly different color */
+  /* background-color: #f9f9f9; */
+  /* Optional: slight background highlight */
+  /* padding: 0 2px; */
+  border: 1px dotted var(--border);
+  border-radius: 3px;
+  text-decoration: none;
 }
 
 .ipa-notation a {
-    text-decoration: none;
-    /* Or dotted underline if you prefer */
-    color: inherit;
-    /* Inherit color from surrounding text or .ipa-notation span */
-    /* border-bottom: 1px dotted #777; */
-    /* Example for a subtle link indicator */
+  text-decoration: none;
+  /* Or dotted underline if you prefer */
+  color: inherit;
+  /* Inherit color from surrounding text or .ipa-notation span */
+  /* border-bottom: 1px dotted #777; */
+  /* Example for a subtle link indicator */
 }
 
 .ipa-notation a:hover {
-    text-decoration: none;
-    border: 1px dotted var(--content);
-    /* color: var(--accent); */
-    /* Use your theme's accent color on hover if desired */
+  text-decoration: none;
+  border: 1px dotted var(--content);
+  /* color: var(--accent); */
+  /* Use your theme's accent color on hover if desired */
 }
