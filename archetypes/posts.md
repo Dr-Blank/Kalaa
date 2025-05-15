@@ -80,6 +80,6 @@ Explain the concept here.
 
 ...
 
-## Further Reading / Practice
+## Further Exploration 📚
 
 ...
