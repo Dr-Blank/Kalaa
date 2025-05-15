@@ -1,0 +1,155 @@
+{{/* layouts/partials/page_glossary.html */}}
+{{/* Expects the current Page context '.' to be passed if called from single.html */}}
+{{ $page := . }}
+
+{{/* Try to retrieve the glossary dictionary from the page's Scratch */}}
+{{ with $page.Scratch.Get "pageGlossary" }}
+{{ $glossaryData := . }} {{/* Assign to a variable for easier access */}}
+{{/* Check if the retrieved dictionary actually contains items */}}
+{{ if gt (len $glossaryData) 0 }}
+<div class="page-glossary-container">
+    <details class="page-glossary" {{ if gt (len $glossaryData) 7 }}id="longGlossary" {{ end }}>
+        <summary>
+            <div class="summary-content">
+                <h2>Glossary ({{ len $glossaryData }} terms)</h2>
+                <span>Click to expand/collapse</span>
+            </div>
+        </summary>
+        <div class="glossary-content-wrapper"> {{/* Added a wrapper for padding */}}
+            <dl>
+                {{/* Sort glossary items alphabetically by the 'term' key before ranging */}}
+                {{ range sort $glossaryData "term" "asc" }}
+                <dt id="glossary-{{ .term | urlize }}">{{ .term }}</dt>
+                <dd>{{ .definition }}</dd>
+                {{ end }}
+            </dl>
+        </div>
+    </details>
+</div>
+
+{{/* JavaScript for "click inside to close" for long glossaries */}}
+{{ if gt (len $glossaryData) 7 }} {{/* Adjust '7' to what you consider a "long" glossary */}}
+<script>
+    // Ensure this script runs only once, even if partial is included multiple times (though unlikely for glossary)
+    if (!window.longGlossaryScriptLoaded) {
+        document.addEventListener('DOMContentLoaded', function () {
+            const longGlossary = document.getElementById('longGlossary');
+            if (longGlossary) {
+                const summaryElement = longGlossary.querySelector('summary'); // Target summary for background
+                const glossaryContentWrapper = longGlossary.querySelector('.glossary-content-wrapper');
+
+                // Handle click on the content wrapper to close
+                glossaryContentWrapper.addEventListener('click', function (event) {
+                    if (event.target === glossaryContentWrapper || event.target.tagName === 'DL') {
+                        longGlossary.removeAttribute('open');
+                    }
+                });
+
+                // Handle click outside to close
+                document.addEventListener('click', function (event) {
+                    if (longGlossary.hasAttribute('open') && !longGlossary.contains(event.target)) {
+                        if (!event.target.closest('abbr[title]')) {
+                            longGlossary.removeAttribute('open');
+                        }
+                    }
+                });
+            }
+        });
+        window.longGlossaryScriptLoaded = true;
+    }
+</script>
+<style>
+    .page-glossary-container {
+        margin-top: 2.5em;
+        padding-top: 1.5em;
+        border-top: 1px solid var(--border);
+    }
+
+    .page-glossary {
+        font-size: 0.9em;
+    }
+
+    .page-glossary summary {
+        cursor: pointer;
+        list-style: none;
+        /* Remove default disclosure triangle */
+        padding: 0;
+        /* Remove default padding from summary */
+    }
+
+    .page-glossary summary::-webkit-details-marker {
+        display: none;
+        /* Remove default disclosure triangle in WebKit */
+    }
+
+    /* This is the clickable area with the background */
+    .page-glossary summary .summary-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75em 1em;
+        /* Add some padding */
+        background-color: var(--code-bg);
+        /* CHANGED: Using your --code-bg for a distinct background */
+        /* This often provides a subtle, slightly off-main background */
+        border-radius: var(--radius);
+        /* Using your --radius variable */
+        transition: background-color 0.2s ease-in-out;
+        border: 1px solid var(--border);
+        /* Add a border around the summary */
+    }
+
+    .page-glossary summary:hover .summary-content {
+        /* For hover, let's try a slightly darker version or a different subtle variable if available */
+        /* If --tertiary is too dark or light, adjust. Maybe a slightly modified --code-bg */
+        /* Let's assume --tertiary can work for subtle contrast. */
+        /* If not, you might need to define a new variable or use a static slightly darker color */
+        background-color: var(--tertiary);
+        /* Tentative: Using --tertiary. Adjust if needed. */
+        /* In dark mode, --tertiary (rgb(65, 66, 68)) might be good */
+        /* In light mode, --tertiary (rgb(214, 214, 214)) could work too */
+    }
+
+    .page-glossary summary .summary-content h2 {
+        font-size: 1.2em;
+        margin: 0;
+        color: var(--primary);
+    }
+
+    .page-glossary summary .summary-content span {
+        font-size: 0.8em;
+        color: var(--secondary);
+    }
+
+    /* Style for the content revealed when <details> is open */
+    .page-glossary .glossary-content-wrapper {
+        padding: 1em 1em 0.5em 1em;
+        border: 1px solid var(--border);
+        border-top: none;
+        /* No top border as summary has its own border/background */
+        margin-top: -1px;
+        /* Pull up slightly to overlap summary's bottom border if summary has one */
+        border-bottom-left-radius: var(--radius);
+        border-bottom-right-radius: var(--radius);
+        background-color: var(--entry);
+    }
+
+    .page-glossary dl dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+        color: var(--primary);
+    }
+
+    .page-glossary dl dd {
+        margin-left: 1.5em;
+        margin-bottom: 0.75em;
+        color: var(--content);
+    }
+</style>
+
+{{ end }}
+
+{{ end }}
+{{/* Important: Clean up scratchpad for this page after use */}}
+{{ $page.Scratch.Delete "pageGlossary" }}
+{{ end }}

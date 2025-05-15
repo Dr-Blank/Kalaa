@@ -43,56 +43,8 @@
 
   {{/* layouts/_default/single.html (after {{ .Content }}) */}}
 
-  {{/* Try to retrieve the glossary dictionary from the page's Scratch */}}
-  {{ with .Page.Scratch.Get "pageGlossary" }}
-  {{/* Check if the retrieved dictionary actually contains items */}}
-  {{ if gt (len .) 0 }}
-  <div class="page-glossary">
-    {{/* Add a heading for the glossary section */}}
-    <h2>Glossary</h2>
-    <dl>
-      {{/* Sort glossary items alphabetically by the 'term' key before ranging */}}
-      {{ range sort . "term" "asc" }}
-      <dt>{{ .term }}</dt>
-      <dd>{{ .definition }}</dd>
-      {{ end }}
-    </dl>
-  </div>
-  {{/* Optional: Add some basic styling directly here, or preferably in your custom CSS */}}
-  <style>
-    .page-glossary {
-      margin-top: 2.5em;
-      padding-top: 1.5em;
-      border-top: 1px solid var(--border-color);
-      /* Use theme variable if available */
-      font-size: 0.9em;
-    }
-
-    .page-glossary h2 {
-      font-size: 1.2em;
-      /* Slightly smaller than main headings */
-      margin-bottom: 1em;
-    }
-
-    .page-glossary dl dt {
-      font-weight: bold;
-    }
-
-    .page-glossary dl dd {
-      margin-left: 1.5em;
-      margin-bottom: 0.75em;
-      color: var(--secondary);
-      /* Use theme variable if available */
-    }
-  </style>
-  {{ end }}
-  {{/* Important: Clean up scratchpad for this page after use */}}
-  {{ $.Page.Scratch.Delete "pageGlossary" }}
-  {{ end }}
-
-  {{/* The rest of the original single.html template continues below */}}
-
-
+  {{/* Render the page glossary if any terms were collected by abbr shortcodes */}}
+  {{ partial "page_glossary.html" . }}
   {{- end }}
 
   <footer class="post-footer">
